@@ -1,0 +1,10 @@
+C:\Users\sasha\source\repos\TestingApp\TestingApp\bin\Debug\TestingApp.exe.config
+C:\Users\sasha\source\repos\TestingApp\TestingApp\bin\Debug\TestingApp.exe
+C:\Users\sasha\source\repos\TestingApp\TestingApp\bin\Debug\TestingApp.pdb
+C:\Users\sasha\source\repos\TestingApp\TestingApp\obj\Debug\TestingApp.csprojAssemblyReference.cache
+C:\Users\sasha\source\repos\TestingApp\TestingApp\obj\Debug\TestingApp.MainForm.resources
+C:\Users\sasha\source\repos\TestingApp\TestingApp\obj\Debug\TestingApp.Properties.Resources.resources
+C:\Users\sasha\source\repos\TestingApp\TestingApp\obj\Debug\TestingApp.csproj.GenerateResource.cache
+C:\Users\sasha\source\repos\TestingApp\TestingApp\obj\Debug\TestingApp.csproj.CoreCompileInputs.cache
+C:\Users\sasha\source\repos\TestingApp\TestingApp\obj\Debug\TestingApp.exe
+C:\Users\sasha\source\repos\TestingApp\TestingApp\obj\Debug\TestingApp.pdb
