@@ -17,7 +17,7 @@ namespace TestingApp
             {
                 for (int i = 0; i < testcaseCount; i++)
                 {
-                    double step = Math.Round(random.NextDouble() * 0.499999 + 0.000001, 5);
+                    double step = Math.Round(random.NextDouble() * 0.499999 + 0.000001, 6);
                     int method = random.Next(1, 4);
                     output[i] = new Data(leftBorder, rightBorder, step.ToString(), method.ToString(), coeffs);
                 }
