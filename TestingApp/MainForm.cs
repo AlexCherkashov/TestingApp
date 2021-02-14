@@ -29,6 +29,12 @@ namespace TestingApp
             double rightBodred = (double)inputRightBorder.Value;
             string coeffString = textBoxInputCoeff.Text;
 
+            if (!File.Exists("Integral3x.exe"))
+            {
+                MessageBox.Show("Файл программы Integral3x не найден. Положите его в папки с этой программой", "Ошибка!");
+                return;
+            }
+
             if (leftBorder >= rightBodred)
             {
                 MessageBox.Show("Левая граница должна быть меньше правой", "Ошибка!");
