@@ -100,7 +100,7 @@
             1,
             0,
             0,
-            262144});
+            0});
             // 
             // radioNegative
             // 
@@ -208,6 +208,7 @@
             // 
             // inputRightBorder
             // 
+            this.inputRightBorder.DecimalPlaces = 3;
             this.inputRightBorder.Location = new System.Drawing.Point(158, 45);
             this.inputRightBorder.Minimum = new decimal(new int[] {
             99,
@@ -225,6 +226,7 @@
             // 
             // inputLeftBorder
             // 
+            this.inputLeftBorder.DecimalPlaces = 3;
             this.inputLeftBorder.Location = new System.Drawing.Point(158, 18);
             this.inputLeftBorder.Minimum = new decimal(new int[] {
             100,

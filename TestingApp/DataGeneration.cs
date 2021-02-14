@@ -17,7 +17,7 @@ namespace TestingApp
             {
                 for (int i = 0; i < testcaseCount; i++)
                 {
-                    double step = Math.Round(random.NextDouble() * 0.499999 + 0.000001, 5);
+                    double step = Math.Round(random.NextDouble() * 0.499999 + 0.000001, 6);
                     int method = random.Next(1, 4);
                     output[i] = new Data(leftBorder, rightBorder, step.ToString(), method.ToString(), coeffs);
                 }
@@ -26,8 +26,6 @@ namespace TestingApp
             {
                 for (int i = 0; i < testcaseCount; i++)
                 {
-                    //double step = random.Next(4, 10);
-                    //int method = random.Next(4, 10);
                     int chose = random.Next(2);
                     string step;
                     string method;
@@ -42,7 +40,7 @@ namespace TestingApp
                     {
                         chose = random.Next(2);
                         method = chose == 0 ? "method" : random.Next(5, 20).ToString();
-                        step = Math.Round(random.NextDouble() * 0.499999 + 0.000001, 5).ToString();
+                        step = Math.Round(random.NextDouble() * 0.499999 + 0.000001, 6).ToString();
                     }
 
                     output[i] = new Data(leftBorder, rightBorder, step, method, coeffs);
