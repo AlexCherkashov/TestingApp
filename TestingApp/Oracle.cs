@@ -12,37 +12,30 @@ namespace TestingApp
         {
             bool stepIsDouble = Double.TryParse(inputData.Step, out double step);
             bool methodIsDouble = Double.TryParse(inputData.Method, out double method);
-            string output = "";
+            List<string> output = new List<string>();
 
             if (inputData.LeftBorder >= inputData.RightBorder)
-            {
-                if (output != "") output += "\r\n";
-                output += "Левая граница диапазона должна быть < правой границы диапазона!";
-            }
+                output.Add("Левая граница диапазона должна быть < правой границы диапазона!");
+
             if (!stepIsDouble || step > 0.5 || step < 0.000001)
-            {
-                if (output != "") output += "\r\n";
-                output += "Шаг интегрирования должен быть в пределах [0.000001;0.5]";
-            }
+                output.Add("Шаг интегрирования должен быть в пределах [0.000001;0.5]");
+
             if (!methodIsDouble || method > 3 || method < 1)
-            {
-                if (output != "") output += "\r\n";
-                output += "Четвертый параметр определяет метод интегрирования и должен быть в пределах [1;3]";
-            }
+                output.Add("Четвертый параметр определяет метод интегрирования и должен быть в пределах [1;3]");
+
             if (inputData.Coeffs.Count == 0)
-            {
-                if (output != "") output += "\r\n";
-                output += "Число параметров не соответствует ожидаемому и должно быть, как минимум 5!";
-            }
-            if (output == "")
+                output.Add("Число параметров не соответствует ожидаемому и должно быть, как минимум 5!");
+
+            if (output.Count == 0)
             {
                 double result = 0;
                 for (int i = 0; i < inputData.Coeffs.Count(); i++)
                     result += inputData.Coeffs[i] * ((Math.Pow(inputData.RightBorder, i + 1) / (i + 1))
                                                     - (Math.Pow(inputData.LeftBorder, i + 1) / (i + 1)));
-                output = "S = " + result;
+                return "S = " + result;
             }
-            return output;
+
+            return string.Join("\r\n", output);
         }
     }
 }

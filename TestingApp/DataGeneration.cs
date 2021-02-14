@@ -34,13 +34,13 @@ namespace TestingApp
                     {
                         chose = random.Next(2);
                         step = chose == 0 ? "step" : random.Next(-5, 0).ToString();
-                        method = random.Next(1, 4).ToString();
+                        method = random.Next(-1, 5).ToString();
                     }
                     else
                     {
                         chose = random.Next(2);
                         method = chose == 0 ? "method" : random.Next(5, 20).ToString();
-                        step = Math.Round(random.NextDouble() * 0.499999 + 0.000001, 6).ToString();
+                        step = Math.Round(random.NextDouble() - 0.5, 6).ToString();
                     }
 
                     output[i] = new Data(leftBorder, rightBorder, step, method, coeffs);
