@@ -88,11 +88,6 @@
             0,
             0,
             0});
-            this.inputError.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            327680});
             this.inputError.Name = "inputError";
             this.inputError.Size = new System.Drawing.Size(99, 20);
             this.inputError.TabIndex = 4;

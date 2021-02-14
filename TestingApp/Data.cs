@@ -25,12 +25,7 @@ namespace TestingApp
 
         public override string ToString()
         {
-            return LeftBorder + " " + RightBorder + " " + Step + " " + Method + " " + ListToString(Coeffs);
-        }
-
-        private string ListToString(List<double> list)
-        {
-            return string.Join(" ", list);
+            return LeftBorder + " " + RightBorder + " " + Step + " " + Method + " " + string.Join(" ", Coeffs);
         }
     }
 }

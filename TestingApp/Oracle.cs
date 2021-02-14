@@ -32,7 +32,7 @@ namespace TestingApp
                 for (int i = 0; i < inputData.Coeffs.Count(); i++)
                     result += inputData.Coeffs[i] * ((Math.Pow(inputData.RightBorder, i + 1) / (i + 1))
                                                     - (Math.Pow(inputData.LeftBorder, i + 1) / (i + 1)));
-                return "S = " + result;
+                return "S = " + Math.Round(result, 4);
             }
 
             return string.Join("\r\n", output);
