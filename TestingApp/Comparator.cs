@@ -14,7 +14,7 @@ namespace TestingApp
             string testType = isPositive ? "P" : "N";
             for (int i = 0; i < inputData.Length; i++)
             {
-                report += "TEST " + i + 1 + " " + testType + "\r\n"
+                report += "TEST " + (i + 1) + " " + testType + "\r\n"
                                 + "X: " + inputData[i].ToString() + "\r\n"
                                 + "EPS: " + error + "\r\n"
                                 + "YE: " + expectedResult[i] + "\r\n"
