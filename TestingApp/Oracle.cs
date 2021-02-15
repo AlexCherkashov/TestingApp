@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TestingApp
 {
@@ -17,10 +15,14 @@ namespace TestingApp
             if (inputData.LeftBorder >= inputData.RightBorder)
                 output.Add("Левая граница диапазона должна быть < правой границы диапазона!");
 
-            if (!stepIsDouble || step > 0.5 || step < 0.000001)
+            if (!stepIsDouble)
+                output.Add("Шаг интегрирования должен быть числом");
+            else if (step > 0.5 || step < 0.000001)
                 output.Add("Шаг интегрирования должен быть в пределах [0.000001;0.5]");
 
-            if (!methodIsDouble || method > 3 || method < 1)
+            if (!methodIsDouble)
+                output.Add("Четвертый параметр должен быть числом");
+            else if (method > 3 || method < 1)
                 output.Add("Четвертый параметр определяет метод интегрирования и должен быть в пределах [1;3]");
 
             if (inputData.Coeffs.Count == 0)
